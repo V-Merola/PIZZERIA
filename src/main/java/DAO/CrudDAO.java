@@ -136,7 +136,7 @@ public class CrudDAO {
 	// METODI PER IMPASTO E INGREDIENTI
 	// recupera la lista degli impasti
 
-	public List<Impasto> readAllImpasto() {
+	public static List<Impasto> readAllImpasto() {
 		EntityManager entityManager = emf.createEntityManager();
 		try {
 			entityManager.getTransaction().begin();
@@ -153,27 +153,7 @@ public class CrudDAO {
 		}
 	}
 
-	// recupero l'impasto
-	/*
-	 * public Impasto getImpasto(String nomeImpasto) { EntityManager entityManager =
-	 * emf.createEntityManager();
-	 * 
-	 * try { entityManager.getTransaction().begin();
-	 * 
-	 * String queryHQL = "SELECT i FROM Impasto i WHERE i.nome = :nome";
-	 * TypedQuery<Impasto> query = entityManager.createQuery(queryHQL,
-	 * Impasto.class); query.setParameter("nome", nomeImpasto);
-	 * 
-	 * Impasto impasto = query.getSingleResult();
-	 * 
-	 * entityManager.getTransaction().commit();
-	 * 
-	 * return impasto; } catch (NoResultException e) { return null; } finally {
-	 * entityManager.close(); } }
-	 */
-	// Recupero impasto tramite id -
-
-	public Impasto getImpastoById(Long idImpasto) {
+	public static Impasto getImpastoById(Long idImpasto) {
 		EntityManager entityManager = emf.createEntityManager();
 		try {
 			entityManager.getTransaction().begin();
@@ -209,24 +189,6 @@ public class CrudDAO {
 		}
 	}
 
-	// recupero gli ingredienti scelti dall'utente dal database tramite nome
-
-	/*
-	 * public List<Ingrediente> getIngredienti(List<String> ingredientiScelti) {
-	 * EntityManager entityManager = emf.createEntityManager(); try {
-	 * entityManager.getTransaction().begin();
-	 * 
-	 * String queryHQL = "SELECT i FROM Ingrediente i WHERE i.nome IN :nome"; Query
-	 * query = entityManager.createQuery(queryHQL, Ingrediente.class);
-	 * query.setParameter("nome", ingredientiScelti);
-	 * 
-	 * List<Ingrediente> ingredienti = query.getResultList();
-	 * 
-	 * entityManager.getTransaction().commit();
-	 * 
-	 * return ingredienti; } catch (NoResultException e) { return null; } finally {
-	 * entityManager.close(); } }
-	 */
 	// recupero gli ingredienti scelti dall'utente dal database tramite id
 	public List<Ingrediente> getIngredientiById(Long[] ingredientiId) {
 		EntityManager entityManager = emf.createEntityManager();

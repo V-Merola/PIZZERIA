@@ -71,7 +71,6 @@ public class LoginServlet extends HttpServlet {
 
 			// response.sendRedirect("DashboardServlet");
 
-			// INVIARE AL JSP ANCHE LA LISTA DELLE PIZZE INSERITE DALL'UTENTE
 
 		} else {
 			request.setAttribute("errore", "Credenziali errate");

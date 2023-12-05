@@ -32,12 +32,7 @@
 								if (impastiLista != null && !impastiLista.isEmpty()) {
 									for (Impasto impasto : impastiLista) {
 										boolean checked = false;
-										/*for (Impasto pizzaImpasto : pizzaDaModificare.)) {
-										if (impasto.getId().equals(pizzaImpasto.getId())) {
-										checked = true;
-										break;
-										}
-										}*/
+
 										if (impasto.getNome().equals(pizzaDaModificare.getImpasto().getNome())) {
 									checked = true;
 										}
@@ -64,7 +59,6 @@
 								List<Ingrediente> ingredienti = (List<Ingrediente>) request.getAttribute("ingredienteList");
 								if (ingredienti != null && !ingredienti.isEmpty()) {
 									for (Ingrediente ingrediente : ingredienti) {
-										//boolean checked = pizzaDaModificare.getIngredienti().contains(ingrediente);
 										boolean checked = false;
 										for (Ingrediente pizzaIngrediente : pizzaDaModificare.getIngredienti()) {
 									if (ingrediente.getId().equals(pizzaIngrediente.getId())) {
@@ -73,12 +67,10 @@
 									}
 										}
 								%>
-								<!-- Inserire la selezione automatica delle caselle 
-								   relative agli ingredienti della pizza da  modificare -->
+								
 								<tr>
 									<td><input type="checkbox" name="ingrediente"
-										value="<%=ingrediente.getId()%>"
-										<%=checked ? "checked" : ""%>></td>
+										value="<%=ingrediente.getId()%>" <%=checked ? "checked" : ""%>></td>
 									<td><%=ingrediente.getNome()%></td>
 								</tr>
 								<%

@@ -21,16 +21,7 @@ public class PizzeriaService {
 	public PizzeriaService() {
 		this.crudDAO = new CrudDAO();
 	}
-	
-	/*Gestione dei servizi Web*/
-	/*
-	@GET
-    @Produces({ MediaType.APPLICATION_JSON, MediaType.APPLICATION_XML })
-    public List<Employee> getEmployees_JSON() {
-        List<Employee> listOfCountries = EmployeeDAO.getAllEmployees();
-        return listOfCountries;
-    }
-	 */
+
 
 	//GET ALL PIZZA
 	@GET

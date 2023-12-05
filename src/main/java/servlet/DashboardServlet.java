@@ -61,7 +61,7 @@ public class DashboardServlet extends HttpServlet {
 
 		CrudDAO dao = new CrudDAO();
 
-		// Potrei recuperare impasto tramite id
+		//recuperare impasto tramite id
 		// Impasto impasto = dao.getImpasto(impastoNome);
 		Impasto impasto = dao.getImpastoById(idImpasto);
 
