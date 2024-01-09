@@ -10,10 +10,11 @@ import javax.persistence.TypedQuery;
 
 import model.Impasto;
 import model.Utente;
+import util.JPAUtil;
 
 
 public class RESTDao {
-	private static final EntityManagerFactory emf = Persistence.createEntityManagerFactory("PERS");
+	private static final EntityManagerFactory emf = JPAUtil.getEntityManagerFactory();
 
 	// CLASSE CHE GESTISCE I METODI CRUD PER IL REST
 
