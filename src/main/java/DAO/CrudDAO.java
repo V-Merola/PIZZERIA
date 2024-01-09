@@ -14,10 +14,11 @@ import model.Impasto;
 import model.Ingrediente;
 import model.Pizza;
 import model.Utente;
+import util.JPAUtil;
 
 public class CrudDAO {
 
-	private static final EntityManagerFactory emf = Persistence.createEntityManagerFactory("PERS");
+	private static final EntityManagerFactory emf = JPAUtil.getEntityManagerFactory();
 
 	/* verifica se l'utente è presente nel database */
 	public Utente readUtente(String username, String password) {

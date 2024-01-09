@@ -4,7 +4,7 @@ import javax.persistence.EntityManagerFactory;
 import javax.persistence.Persistence;
 
 public class JPAUtil {
-	private static final String PERSISTENCE_UNIT_NAME = "PIZZERIA";
+	private static final String PERSISTENCE_UNIT_NAME = "PERS";
 
 	/*
 	 * EntityManagerFactory: crea un EntityManager oggetto per convertire i dati da
